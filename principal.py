@@ -40,7 +40,7 @@ st.markdown("<h1 style='text-align: center; color: green;'>Aplicativo IA - Previ
 Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
 Sex = st.number_input('Digite o sexo:')
 ChestPainType = st.number_input('Digite o tipo de dor:')
-RestingBP = st.number_input('Digite o valor da pressão arterial:')
+RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
 Cholesterol = st.number_input('Digite o colesterol:')
 FastingBS = st.number_input('Digite o valor da FastingBS:')
 RestingECG = st.number_input('Digite o valor da RestingECG:')
