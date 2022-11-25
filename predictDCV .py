@@ -50,8 +50,7 @@ Oldpeak = st.number_input('Digite o valor da pressão arterial:')
 ST_Slope = st.number_input('Digite o valor da pressão arterial:')
 
 if st.button('Clique aqui'):
-  resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak	ST_Slope
-]])
+  resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope]])
   
   st.write('Resultado:',resultado)
  
