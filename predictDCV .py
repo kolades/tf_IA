@@ -1,7 +1,8 @@
-import pandas as pd
+import streamlit as st
+import pandas as pd #manipulacao de dados
 
-#dados = pd.read_csv("/content/drive/MyDrive/Inteligência Artificial/TrabalhoFinal/heart_failure_clinical_records_dataset.csv")
-dados = pd.read_csv("/content/drive/MyDrive/Inteligência Artificial/TrabalhoFinal/heart.csv")
+###################importando os dados do csv ########################
+dados = pd.read_csv("heart.csv")
 from sklearn.preprocessing import OrdinalEncoder
 
 encoder = OrdinalEncoder()
@@ -33,11 +34,36 @@ arvore = DecisionTreeClassifier()
 arvore.fit(features_treino,classes_treino)
 
 #testando a arvore treinada
-resultado = arvore.predict(features_teste)
+#resultado = arvore.predict(features_teste)
 
-#avalia se a predição da árvore é a esperada (ou correta)
-from sklearn import metrics
+st.markdown("<h1 style='text-align: center; color: green;'>Aplicativo IA - Naives Bayes</h1>", unsafe_allow_html=True)
+Age = st.number_input('Digite a idade do paciente:')
+Sex = st.number_input('Digite o sexo:')
+ChestPainType = st.number_input('Digite o tipo de dor:')
+RestingBP = st.number_input('Digite o valor da pressão arterial:')
+Cholesterol = st.number_input('Digite o valor da pressão arterial:')
+FastingBS = st.number_input('Digite o valor da pressão arterial:')
+RestingECG = st.number_input('Digite o valor da pressão arterial:')
+MaxHR = st.number_input('Digite o valor da pressão arterial:')
+ExerciseAngina = st.number_input('Digite o valor da pressão arterial:')
+Oldpeak = st.number_input('Digite o valor da pressão arterial:')
+ST_Slope = st.number_input('Digite o valor da pressão arterial:')
 
-dados
+if st.button('Clique aqui'):
+  resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak	ST_Slope
+]])
+  
+  st.write('Resultado:',resultado)
+ 
+ # if resultado == "Iris-versicolor":
+  # st.write("Iris-versicolor")
+   #st.image("Iris-versicolor.jpg")
+  
+  #if resultado == "Iris-setosa":
+   #st.write("Iris-setosa")
+   #st.image("Iris-setosa.jpg")
+  
+ # if resultado == "Iris-virginica":
+  # st.write("Iris-virginica")
+   #st.image("Iris-virginica.jpg")
 
-print(metrics.classification_report(classes_teste,resultado,target_names=['Sim','Não']))
