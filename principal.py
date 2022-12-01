@@ -51,15 +51,15 @@ Sex = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
   #  ["Female", "Male"],
    # index=0,
 #)
-ChestPainType = st.selectbox('Digite o tipo de dor:',("ATA","NAP","ASY","TA"))
-RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
-Cholesterol = st.number_input('Digite o colesterol:')
-FastingBS = st.selectbox('Digite o valor da FastingBS:',("0","1"))
-RestingECG = st.selectbox('Digite o valor da RestingECG:',("LVH","NORMAL","ST"))
-MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:')#  [Valor numérico entre 60 e 202]
-ExerciseAngina = st.selectbox('Digite o valor da ExerciseAngina:',("SIM","NÃO"))
+ChestPainType = st.selectbox('Informe o tipo de dor no peito [TA: Angina Típica, ATA: Angina Atípica, NAP: Dor Não Anginosa, ASY: Assintomática] :',("ATA","NAP","ASY","TA"))
+RestingBP = st.number_input('Informe o valor da pressão arterial:', min_value=120,max_value=180)
+Cholesterol = st.number_input('Informe o colesterol:')
+FastingBS = st.selectbox('Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário',("0","1"))
+RestingECG = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
+MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:',min_value=40,max_value=202)#  [Valor numérico entre 60 e 202]
+ExerciseAngina = st.selectbox('Informe se a Angina foi induzida por exercício:',("SIM","NÃO"))
 Oldpeak = st.number_input('Digite o valor da Oldpeak:')
-ST_Slope = st.selectbox('Digite o valor da ST_Slope:',("DOWN","FLAT","UP"))
+ST_Slope = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("DOWN","FLAT","UP"))
 
 if st.button('Clique aqui'):
   resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope]])
