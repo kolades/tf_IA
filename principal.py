@@ -55,8 +55,15 @@ else:
   #  ["Female", "Male"],
    # index=0,
 #)
-ChestPainType = st.selectbox('Informe o tipo de dor no peito [TA: Angina Típica, ATA: Angina Atípica, NAP: Dor Não Anginosa, ASY: Assintomática] :',("ATA","NAP","ASY","TA"))
-#RestingBP = st.number_input('Informe o valor da pressão arterial:', min_value=120,max_value=180)
+ChestPainType_= st.selectbox('Informe o tipo de dor no peito [TA: Angina Típica, ATA: Angina Atípica, NAP: Dor Não Anginosa, ASY: Assintomática] :',("ATA","NAP","ASY","TA"))
+if ChestPainType_== "ATA
+            ChestPainType = 0
+elif ChestPainType_ == "NAP"
+            ChestPainType = 1
+elif ChestPainType_ == "ASY
+            ChestPainType = 2
+            else:
+            ChestPainType = 3
 RestingBP = st.slider(
             "# of results",
             min_value=120,
