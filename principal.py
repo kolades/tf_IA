@@ -48,7 +48,7 @@ Age = st.slider(
 Sex_ = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
 if Sex_ == "Feminino":
             Sex = 1
-            else Sex = 0
+            else: Sex = 0
 #Sex = form.selectbox(
  #   "Enter the Gender:",
   #  ["Female", "Male"],
