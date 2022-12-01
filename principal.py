@@ -37,9 +37,14 @@ arvore.fit(features_treino,classes_treino)
 #resultado = arvore.predict(features_teste)
 
 st.markdown("<h1 style='text-align: center; color: green;'>Aplicativo IA - Previsão de Doença Cardiaca</h1>", unsafe_allow_html=True)
-Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
-#Age =  st.date_input('Digite a idade do paciente:', datetime.date(2019, 7, 6))
-#Age = st.date_input("Qual a data de seu anivesário", datetime.date(2019, 7, 6))
+#Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
+Age = st.slider(
+            "# of results",
+            min_value=1,
+            max_value=30,
+            value=10,
+            help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
+        )
 Sex = st.number_input('Digite o sexo:')
 ChestPainType = st.number_input('Digite o tipo de dor:')
 RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
