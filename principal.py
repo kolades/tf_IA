@@ -51,7 +51,7 @@ Sex = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
   #  ["Female", "Male"],
    # index=0,
 #)
-ChestPainType = st.selectbox('Digite o tipo de dor:'("ATA","NAP","ASY","TA"))
+ChestPainType = st.selectbox('Digite o tipo de dor:',("ATA","NAP","ASY","TA"))
 RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
 Cholesterol = st.number_input('Digite o colesterol:')
 FastingBS = st.number_input('Digite o valor da FastingBS:')# 0 OU 1
