@@ -56,7 +56,7 @@ else:
    # index=0,
 #)
 ChestPainType_ = st.selectbox('Informe o tipo de dor no peito [TA: Angina Típica, ATA: Angina Atípica, NAP: Dor Não Anginosa, ASY: Assintomática] :',("ATA","NAP","ASY","TA"))
-if ChestPainType_ == "ATA"
+if ChestPainType_ == "ATA":
             ChestPainType = 0
 elif ChestPainType_ == "NAP":
             ChestPainType = 1
