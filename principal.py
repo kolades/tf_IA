@@ -45,7 +45,10 @@ Age = st.slider(
             value=10,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-Sex = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
+Sex_ = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
+if Sex_ = "Feminino":
+            Sex = 1
+            else Sex = 0
 #Sex = form.selectbox(
  #   "Enter the Gender:",
   #  ["Female", "Male"],
@@ -60,7 +63,7 @@ RestingBP = st.slider(
             value=120,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-Cholesterol = st.number_input('Informe o colesterol:')
+Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
 FastingBS = st.selectbox('Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário',("0","1"))
 RestingECG = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
 #MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:',min_value=40,max_value=202)#  [Valor numérico entre 60 e 202]
