@@ -46,7 +46,7 @@ Age = st.slider(
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
 Sex_ = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
-if Sex_ = "Feminino":
+if Sex_ == "Feminino":
             Sex = 1
             else Sex = 0
 #Sex = form.selectbox(
