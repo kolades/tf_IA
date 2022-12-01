@@ -45,22 +45,21 @@ Age = st.slider(
             value=10,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-#Sex = st.number_input('Digite o sexo:')
 Sex = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
 #Sex = form.selectbox(
  #   "Enter the Gender:",
   #  ["Female", "Male"],
    # index=0,
 #)
-ChestPainType = st.number_input('Digite o tipo de dor:')
+ChestPainType = st.selectbox('Digite o tipo de dor:'("ATA","NAP","ASY","TA"))
 RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
 Cholesterol = st.number_input('Digite o colesterol:')
-FastingBS = st.number_input('Digite o valor da FastingBS:')
-RestingECG = st.number_input('Digite o valor da RestingECG:')
-MaxHR = st.number_input('Digite o valor da MaxHR:')
-ExerciseAngina = st.number_input('Digite o valor da ExerciseAngina:')
+FastingBS = st.number_input('Digite o valor da FastingBS:')# 0 OU 1
+RestingECG = st.number_input('Digite o valor da RestingECG:')# LVH, NORMAL, ST
+MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:')#  [Valor numérico entre 60 e 202]
+ExerciseAngina = st.number_input('Digite o valor da ExerciseAngina:')# SIM OU NÃO
 Oldpeak = st.number_input('Digite o valor da Oldpeak:')
-ST_Slope = st.number_input('Digite o valor da ST_Slope:')
+ST_Slope = st.number_input('Digite o valor da ST_Slope:')# DOWN, FLAT, UP
 
 if st.button('Clique aqui'):
   resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope]])
