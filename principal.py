@@ -45,7 +45,12 @@ Age = st.slider(
             value=10,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-Sex = st.number_input('Digite o sexo:')
+#Sex = st.number_input('Digite o sexo:')
+Sex = form.selectbox(
+    "Enter the Gender:",
+    ["Female", "Male"],
+    index=0,
+)
 ChestPainType = st.number_input('Digite o tipo de dor:')
 RestingBP = st.number_input('Digite o valor da pressão arterial:', min_value=120,max_value=180)
 Cholesterol = st.number_input('Digite o colesterol:')
