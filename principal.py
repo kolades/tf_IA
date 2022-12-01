@@ -46,7 +46,7 @@ Age = st.slider(
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
 #Sex = st.number_input('Digite o sexo:')
-Sex = st.selectbox("Informe seu genero:","Feminino',"Masculino")
+Sex = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
 #Sex = form.selectbox(
  #   "Enter the Gender:",
   #  ["Female", "Male"],
