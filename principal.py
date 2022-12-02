@@ -65,7 +65,7 @@ elif ChestPainType_ == "ASY":
 else:
             ChestPainType = 3
 RestingBP = st.slider(
-            "# of results",
+            "Informe a pressão arterial em repouso [mm Hg]:",
             min_value=120,
             max_value=180,
             value=120,
@@ -73,7 +73,7 @@ RestingBP = st.slider(
         )
 #Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
 Cholesterol = st.slider(
-            "Informe a idade do paciente:",
+            "Informe o colesterol:",
             min_value=100,
             max_value=400,
             value=200,
