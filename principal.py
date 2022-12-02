@@ -36,8 +36,7 @@ arvore.fit(features_treino,classes_treino)
 #testando a arvore treinada
 #resultado = arvore.predict(features_teste)
 
-coracao = pd.read_csv("coracao-batendo.gif")
-st.markdown(coracao)
+
 st.markdown("<h1 style='text-align: center; color: green;'>Previsão de Doença Cardiaca</h1>", unsafe_allow_html=True)
 #Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
 Age = st.slider(
