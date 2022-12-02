@@ -66,10 +66,10 @@ else:
             ChestPainType = 3
 RestingBP = st.slider(
             "Informe a pressão arterial em repouso [mm Hg]:",
-            min_value=120,
+            min_value=100,
             max_value=180,
             value=120,
-            help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
+            help="You can choose the number of keywords/keyphrases to display. Between 100 and 180, default number is 120.",
         )
 #Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
 Cholesterol = st.slider(
@@ -79,7 +79,7 @@ Cholesterol = st.slider(
             value=200,
             help="You can choose the number of keywords/keyphrases to display. Between 0 and 80, default number is 200.",
         )
-FastingBS = st.selectbox('Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário',("0","1"))
+FastingBS = st.selectbox("Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário",("0","1"))
 RestingECG_ = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
 if RestingECG_ == "LVH":
             RestingECG = 0
@@ -100,7 +100,13 @@ if ExerciseAngina_ == "SIM":
             ExerciseAngina = 0
 else:
             ExerciseAngina = 1
-Oldpeak = st.number_input('Digite o valor da Oldpeak:')
+Oldpeak = st.slider(
+            "Digite o valor da Oldpeak:",
+            min_value=-2,
+            max_value=7,
+            value=2,
+            help="You can choose the number of keywords/keyphrases to display. Between -2 and 7, default number is 2.",
+        )
 ST_Slope_ = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("DOWN","FLAT","UP"))
 if ST_Slope_ == "DOWN":
             ST_Slope = 0
