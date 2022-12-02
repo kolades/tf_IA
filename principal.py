@@ -37,7 +37,7 @@ arvore.fit(features_treino,classes_treino)
 #resultado = arvore.predict(features_teste)
 
 
-st.image("coracao-batendo.gif")
+st.image.("coracao-batendo.gif",center)
 st.markdown("<h1 style='text-align: center; color: green;'>Previsão de Doença Cardiaca</h1>", unsafe_allow_html=True)
 #Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
 Age = st.slider(
@@ -127,10 +127,4 @@ if st.button('Clique aqui'):
  
   if resultado == 1:
             st.write("Paciente Cardíaco")
-  
 
-#st.image("Iris-setosa.jpg")
-  
- # if resultado == "Iris-virginica":
-  # st.write("Iris-virginica")
-   #st.image("Iris-virginica.jpg")
