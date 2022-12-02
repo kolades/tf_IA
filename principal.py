@@ -56,11 +56,11 @@ else:
    # index=0,
 #)
 ChestPainType_ = st.selectbox('Informe o tipo de dor no peito [TA: Angina Típica, ATA: Angina Atípica, NAP: Dor Não Anginosa, ASY: Assintomática] :',("ATA","NAP","ASY","TA"))
-if ChestPainType_ == "ATA":
+if ChestPainType_ == "ASY":
             ChestPainType = 0
-elif ChestPainType_ == "NAP":
+elif ChestPainType_ == "ATA":
             ChestPainType = 1
-elif ChestPainType_ == "ASY":
+elif ChestPainType_ == "NAP":
             ChestPainType = 2
 else:
             ChestPainType = 3
@@ -81,9 +81,9 @@ Cholesterol = st.slider(
         )
 FastingBS = st.selectbox("Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário",("0","1"))
 RestingECG_ = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
-if RestingECG_ == "NORMAL":
+if RestingECG_ == "LVH":
             RestingECG = 0
-elif RestingECG_ == "LVH":
+elif RestingECG_ == "NORMAL":
             RestingECG = 1
 else:
             RestingECG = 2
@@ -108,10 +108,10 @@ Oldpeak = st.slider(
             help="You can choose the number of keywords/keyphrases to display. Between -2 and 7, default number is 2.",
         )
 ST_Slope_ = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("UP","FLAT","DOWN"))
-if ST_Slope_ == "UP":
-            ST_Slope = 0
-elif ST_Slope_ == "FLAT":
+if ST_Slope_ == "FLAT":
             ST_Slope = 1
+elif ST_Slope_ == "UP":
+            ST_Slope = 2
 else:
             ST_Slope = 2
 
