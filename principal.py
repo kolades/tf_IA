@@ -73,7 +73,13 @@ RestingBP = st.slider(
         )
 Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
 FastingBS = st.selectbox('Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário',("0","1"))
-RestingECG = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
+RestingECG_ = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
+if RestingECG_ == "LVH":
+            RestingECG = 0
+elif RestingECG_ == "NORMAL":
+            RestingECG = 1
+else:
+            RestingECG = 2
 #MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:',min_value=40,max_value=202)#  [Valor numérico entre 60 e 202]
 MaxHR = st.slider(
             "# of results",
@@ -82,9 +88,19 @@ MaxHR = st.slider(
             value=60,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-ExerciseAngina = st.selectbox('Informe se a Angina foi induzida por exercício:',("SIM","NÃO"))
+ExerciseAngina_ = st.selectbox('Informe se a Angina foi induzida por exercício:',("SIM","NÃO"))
+if ExerciseAngina_ == "SIM":
+            ExerciseAngina = 0
+else:
+            ExerciseAngina = 1
 Oldpeak = st.number_input('Digite o valor da Oldpeak:')
-ST_Slope = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("DOWN","FLAT","UP"))
+ST_Slope_ = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("DOWN","FLAT","UP"))
+if ST_Slope_ == "DOWN":
+            ST_Slope = 0
+elif ST_Slope_ == "FLAT":
+            ST_Slope = 1
+else:
+            ST_Slope = 2
 
 if st.button('Clique aqui'):
   resultado = arvore.predict([[Age,Sex,ChestPainType,RestingBP,Cholesterol,FastingBS,RestingECG,MaxHR,ExerciseAngina,Oldpeak,ST_Slope]])
