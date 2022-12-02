@@ -47,9 +47,9 @@ Age = st.slider(
         )
 Sex_ = st.selectbox("Informe o genero:",("Feminino","Masculino"))
 if Sex_ == "Feminino":
-            Sex = 1
-else:
             Sex = 0
+else:
+            Sex = 1
 #Sex = form.selectbox(
  #   "Enter the Gender:",
   #  ["Female", "Male"],
@@ -68,7 +68,7 @@ RestingBP = st.slider(
             "Informe a pressão arterial em repouso [mm Hg]:",
             min_value=100,
             max_value=180,
-            value=120,
+            value=160,
             help="You can choose the number of keywords/keyphrases to display. Between 100 and 180, default number is 120.",
         )
 #Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
@@ -76,14 +76,14 @@ Cholesterol = st.slider(
             "Informe o colesterol:",
             min_value=100,
             max_value=400,
-            value=200,
+            value=180,
             help="You can choose the number of keywords/keyphrases to display. Between 0 and 80, default number is 200.",
         )
 FastingBS = st.selectbox("Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário",("0","1"))
 RestingECG_ = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
-if RestingECG_ == "LVH":
+if RestingECG_ == "NORMAL":
             RestingECG = 0
-elif RestingECG_ == "NORMAL":
+elif RestingECG_ == "LVH":
             RestingECG = 1
 else:
             RestingECG = 2
@@ -92,11 +92,11 @@ MaxHR = st.slider(
             "Informe o valor da Frequência Cardiáca:",
             min_value=40,
             max_value=200,
-            value=60,
-            help="You can choose the number of keywords/keyphrases to display. Between 40 and 200, default number is 60.",
+            value=172,
+            help="You can choose the number of keywords/keyphrases to display. Between 40 and 200, default number is 172.",
         )
 ExerciseAngina_ = st.selectbox('Informe se a Angina foi induzida por exercício:',("SIM","NÃO"))
-if ExerciseAngina_ == "SIM":
+if ExerciseAngina_ == "NÃO":
             ExerciseAngina = 0
 else:
             ExerciseAngina = 1
@@ -104,11 +104,11 @@ Oldpeak = st.slider(
             "Digite o valor da Oldpeak:",
             min_value=-2,
             max_value=7,
-            value=2,
+            value=0,
             help="You can choose the number of keywords/keyphrases to display. Between -2 and 7, default number is 2.",
         )
-ST_Slope_ = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("DOWN","FLAT","UP"))
-if ST_Slope_ == "DOWN":
+ST_Slope_ = st.selectbox('Informe a inclinação do segmento ST do exercício de pico :',("UP","FLAT","DOWN"))
+if ST_Slope_ == "UP":
             ST_Slope = 0
 elif ST_Slope_ == "FLAT":
             ST_Slope = 1
