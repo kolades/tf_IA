@@ -40,12 +40,12 @@ st.markdown("<h1 style='text-align: center; color: green;'>Aplicativo IA - Previ
 #Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
 Age = st.slider(
             "Informe a idade do paciente:",
-            min_value=1,
-            max_value=30,
-            value=10,
-            help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
+            min_value=0,
+            max_value=800,
+            value=40,
+            help="You can choose the number of keywords/keyphrases to display. Between 0 and 80, default number is 40.",
         )
-Sex_ = st.selectbox("Informe seu genero:",("Feminino","Masculino"))
+Sex_ = st.selectbox("Informe o genero:",("Feminino","Masculino"))
 if Sex_ == "Feminino":
             Sex = 1
 else:
@@ -71,7 +71,14 @@ RestingBP = st.slider(
             value=120,
             help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
         )
-Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
+#Cholesterol = st.number_input('Informe o colesterol[mm/dl]:')
+Cholesterol = st.slider(
+            "Informe a idade do paciente:",
+            min_value=100,
+            max_value=400,
+            value=200,
+            help="You can choose the number of keywords/keyphrases to display. Between 0 and 80, default number is 200.",
+        )
 FastingBS = st.selectbox('Informe o açúcar no sangue em jejum [1: se JejumBS > 120 mg/dl, 0: caso contrário',("0","1"))
 RestingECG_ = st.selectbox('Informe o resultado do eletrocardiograma em repouso:',("LVH","NORMAL","ST"))
 if RestingECG_ == "LVH":
@@ -82,11 +89,11 @@ else:
             RestingECG = 2
 #MaxHR = st.number_input('Informe o valor da Frequencia Cardiáca:',min_value=40,max_value=202)#  [Valor numérico entre 60 e 202]
 MaxHR = st.slider(
-            "# of results",
-            min_value=60,
-            max_value=202,
+            "Informe o valor da Frequência Cardiáca:",
+            min_value=40,
+            max_value=200,
             value=60,
-            help="You can choose the number of keywords/keyphrases to display. Between 1 and 30, default number is 10.",
+            help="You can choose the number of keywords/keyphrases to display. Between 40 and 200, default number is 60.",
         )
 ExerciseAngina_ = st.selectbox('Informe se a Angina foi induzida por exercício:',("SIM","NÃO"))
 if ExerciseAngina_ == "SIM":
