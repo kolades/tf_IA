@@ -39,7 +39,7 @@ arvore.fit(features_treino,classes_treino)
 st.markdown("<h1 style='text-align: center; color: green;'>Aplicativo IA - Previsão de Doença Cardiaca</h1>", unsafe_allow_html=True)
 #Age = st.number_input('Digite a idade do paciente:', min_value=1,max_value=150)
 Age = st.slider(
-            "# of results",
+            "Informe a idade do paciente:",
             min_value=1,
             max_value=30,
             value=10,
