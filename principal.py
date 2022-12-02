@@ -120,13 +120,14 @@ if st.button('Clique aqui'):
   
   st.write('Resultado:',resultado)
  
- # if resultado == "Iris-versicolor":
-  # st.write("Iris-versicolor")
-   #st.image("Iris-versicolor.jpg")
+  if resultado == 0:
+            st.write("Paciente Normal")
+ 
+  if resultado == 1:
+            st.write("Paciente Cardíaco")
   
-  #if resultado == "Iris-setosa":
-   #st.write("Iris-setosa")
-   #st.image("Iris-setosa.jpg")
+
+#st.image("Iris-setosa.jpg")
   
  # if resultado == "Iris-virginica":
   # st.write("Iris-virginica")
